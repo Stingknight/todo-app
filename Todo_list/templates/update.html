@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Update page{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+<div class="container-fluid my-5">
+    <div class="row">  
+        <div class="col-lg-3"></div>
+        <div  class="col-lg-5">
+            <form action="" method="POST">
+                <label for="todotext"></label>
+                <input type="text" id="todotext" class="form-control" name="todo1" value="{{update_data.text}}">
+                
+                <div class="col-lg-3">
+                    
+                </div>
+                <br>
+               
+                <div class="row">
+                    <div class="col-lg-3">
+                        <input type="submit" class="btn btn-info" value="Submit">
+                    </div>
+                    <div class="col-lg-3">
+                        
+                    </div>
+                    <div class="col-lg-6"></div>
+                </div>
+            </form>
+        </div>
+        <div  class="col-lg-4"></div>
+
+       
+    </div>
+</div>
+
+
+
+{% endblock %}
+
