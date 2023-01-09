@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid my-5">
+    <div class="row">
+        
+        <h2 class="main_topic">Today's news </h2>
+            <br>
+            <br>
+        {% for news,img,desc,url in context %}
+
+            <h3><b>News</b>: {{news}}</h3>
+            <br>
+            <img src="{{img}}" alt="" class="div_img">
+            <br>
+            <h5><b>Description</b>: {{desc}}</h5>
+            <br>
+            <a href="{{url}}"><button class="btn btn-primary btn-sm">More info</button></a>
+        {% endfor %}
+        
+    </div>
+</div>
+
+{% endblock %}
