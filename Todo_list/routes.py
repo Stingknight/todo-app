@@ -48,3 +48,7 @@ def delete_todo(id):
     db.session.commit()
     flash('Deleted sucessfully ')
     return redirect(url_for('home'))
+
+
+
+#main
